@@ -3,10 +3,14 @@ import Link from 'next/link'
 const Home = () => {
   return (
     <div>
-      <div>Welcome to Next.js!</div>
-      <Link href='/about'>
-        <a>about</a>
-      </Link>
+    <h2>じこしょうかい</h2>
+      <ul>
+        <li>ruby</li>
+        <li>rails</li>
+        <li>php</li>
+        <li>xxx</li>
+        <li>xxx</li>
+      </ul>
     </div>
   )
 }
