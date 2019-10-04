@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "lint": "standard",
-    "lint:fix": "standard --fix",
+    "eslint": "eslint --fix .",
+    "lint": "standard --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,json,md,mdx,css,html,yml,yaml,scss,sass}\" && yarn lint:fix",
     "build": "next build",
     "start": "next"
