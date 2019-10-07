@@ -52,6 +52,7 @@ const Manip = ({ globalIps }) => {
 }
 
 Manip.getInitialProps = async ctx => {
+  // const fetchGlobalIps = await fetch('https://manip.tools.isca.jp/api/globalips')
   const fetchGlobalIps = await fetch('http://localhost:3000/api/manip')
   const globalIps = await fetchGlobalIps.json()
   return {
