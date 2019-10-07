@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
 import { makeStyles } from '@material-ui/core/styles'
@@ -39,14 +40,19 @@ const Manip = ({ globalIps }) => {
       </AppBar>
 
       {globalIps.map(v => <p key={v.id}>ip: {v.ip_address} location: {v.location}</p>)}
+
+      <div>
+        <h2>link</h2>
+        <ul>
+          <li><Link href='/link'><a>link</a></Link></li>
+        </ul>
+      </div>
     </div>
   )
 }
 
 Manip.getInitialProps = async ctx => {
-  const query = {}
-
-  const fetchGlobalIps = await fetch('https://manip.tools.isca.jp/api/globalips', query)
+  const fetchGlobalIps = await fetch('http://localhost:3000/api/manip')
   const globalIps = await fetchGlobalIps.json()
   return {
     globalIps: globalIps || []

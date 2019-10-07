@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
 import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -39,6 +40,13 @@ const Manip = ({ num }) => {
 
       <button onClick={() => setCount(count + 1)}>click me!!!</button>
       <p>count: {count}</p>
+
+      <div>
+        <h2>link</h2>
+        <ul>
+          <li><Link href='/link'><a>example</a></Link></li>
+        </ul>
+      </div>
     </div>
   )
 }
